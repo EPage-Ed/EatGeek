@@ -8,7 +8,7 @@
 
 import UIKit
 import TesseractOCRSDKiOS
-
+import GPUImage
 
 protocol OCRDelegate: class {
     func result(text:String)
@@ -20,9 +20,13 @@ class OCR {
     func processImage(image: UIImage) {
 
         if let tesseract = MGTesseract(language: "eng") {
-            tesseract.engineMode = .tesseractCubeCombined
+            tesseract.engineMode = .cubeOnly
             tesseract.pageSegmentationMode = .auto
-            tesseract.image = image.mg_blackAndWhite()
+            
+            let cvWrapper = OpenCVWrapper()
+
+            let img = cvWrapper.preprocessImage(image)
+            tesseract.image = img
             tesseract.recognize()
             delegate?.result(text: tesseract.recognizedText)
         }

@@ -1,24 +1,28 @@
 PODS:
   - CameraManager (4.3.0)
+  - GPUImage (0.1.7)
   - OpenCV (3.4.2)
   - TesseractOCRSDKiOS (4.0.2)
 
 DEPENDENCIES:
   - CameraManager (~> 4.0)
+  - GPUImage
   - OpenCV
   - TesseractOCRSDKiOS
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - CameraManager
+    - GPUImage
     - OpenCV
     - TesseractOCRSDKiOS
 
 SPEC CHECKSUMS:
   CameraManager: 607b60ad5c84bfa481ebf82eb4cd77a8d1f0bc39
+  GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
   OpenCV: 452909747854c92e0f59670961ed5131f5286cb5
   TesseractOCRSDKiOS: 5124816fe04de75f4d7ce91eb8b2bb5096aa6519
 
-PODFILE CHECKSUM: c6fb9308ef59213afe11e0e0d92ab3397d732ead
+PODFILE CHECKSUM: dd92ba2ab4e6adb2d5559071b8aa0931d0b97348
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.5.0

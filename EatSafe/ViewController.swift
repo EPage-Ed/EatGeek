@@ -9,10 +9,21 @@
 import UIKit
 import Vision
 import AVFoundation
+import HealthKit
 import CameraManager
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var infoView: UIView!
+    @IBOutlet weak var infoHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var infoLabel: UILabel!
+    
+    @IBOutlet weak var dataLabel: UILabel! {
+        didSet {
+            dataLabel.layer.cornerRadius = 8
+            dataLabel.layer.masksToBounds = true
+        }
+    }
     @IBOutlet weak var cameraView: UIView!
     @IBOutlet weak var imageView: UIImageView!
     let cameraManager = CameraManager()
@@ -32,7 +43,12 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var camButton: UIButton!
+    @IBOutlet weak var camButton: UIButton! {
+        didSet {
+            camButton.layer.cornerRadius = 10
+            camButton.layer.masksToBounds = true
+        }
+    }
     @IBAction func takeHit(_ sender: UIButton) {
         cameraManager.capturePictureWithCompletion({ (image, error) -> Void in
             guard let image = image else { return }
@@ -43,6 +59,33 @@ class ViewController: UIViewController {
             }
         })
     }
+    
+    let infoData = [
+        "LOADED FRIES\nCalories: 1100\nCarbs: 95g\nSugars: 6g",
+        "SPINACH FLORENTINE FLATBREAD\nCalories: 550\nCarbs: 51g\nSugars: 4g",
+        "BBQ CHICKEN FLATBREAD\nCalories: 650\nCarbs: 66g\nSugars: 18g",
+        "CRISPY BRUSSELS SPROUTS\nCalories: 670\nCarbs: 38g\nSugars: 8g",
+        "GIANT ONION RINGS\nCalories: 690\nCarbs: 155g\nSugars: 33g"
+    ]
+    
+    let infoColors = [ 2, 0, 1, 0, 1 ]
+    
+    func showInfo(index:Int) {
+        infoLabel.text = infoData[index]
+        infoHeightConstraint.constant = 180
+        UIView.animate(withDuration: 0.4) {
+            self.view.layoutIfNeeded()
+        }
+        
+    }
+    
+    func hideInfo() {
+        infoLabel.text = ""
+        infoHeightConstraint.constant = 0
+        UIView.animate(withDuration: 0.4) {
+            self.view.layoutIfNeeded()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,6 +94,20 @@ class ViewController: UIViewController {
         cameraManager.cameraDevice = .back
         cameraManager.writeFilesToPhoneLibrary = false
         cameraManager.shouldRespondToOrientationChanges = true
+        cameraManager.animateShutter = true
+        
+        infoHeightConstraint.constant = 0
+        view.layoutIfNeeded()
+        
+        let t = OpenCVWrapper()
+        t.openCVVersionString()
+        let heartRateType: HKQuantityType   = HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate)!
+        
+        HKHealthStore().requestAuthorization(toShare: nil, read: [heartRateType]) {(success, error) in
+            print(success)
+            //Success will always be equal to true unless a genuine error occurs
+            self.getHeartRateData()
+        }
 
     }
     
@@ -116,7 +173,7 @@ class ViewController: UIViewController {
             // layer.borderColor = UIColor.green.cgColor
             
             do {
-                var transform = CGAffineTransform.identity
+                var transform = CGAffineTransform.identity // .rotated(by: .pi/2)
                 transform = transform.scaledBy(x: image.size.width, y: -image.size.height)
                 transform = transform.translatedBy(x: 0, y: -1)
                 let rect = result.boundingBox.applying(transform)
@@ -192,18 +249,47 @@ class ViewController: UIViewController {
         let bg = [
             UIColor.green.withAlphaComponent(0.2).cgColor,
             UIColor.red.withAlphaComponent(0.2).cgColor,
+            UIColor.yellow.withAlphaComponent(0.2).cgColor,
             UIColor.blue.withAlphaComponent(0.2).cgColor,
             UIColor.magenta.withAlphaComponent(0.2).cgColor,
             UIColor.cyan.withAlphaComponent(0.2).cgColor,
             UIColor.orange.withAlphaComponent(0.2).cgColor
         ]
         for (i,ms) in menuSets.enumerated() {
+            let f = ms.first
+            var x : CGFloat = f?.1.frame.origin.x ?? 0
+            var y : CGFloat = f?.1.frame.origin.y ?? 0
+            var r : CGFloat = f?.1.frame.maxX ?? 0
+            var b : CGFloat = f?.1.frame.maxY ?? 0
             for vl in ms {
-                vl.1.backgroundColor = bg[i % bg.count]
+                let idx = infoColors[i % infoColors.count]
+                vl.1.backgroundColor = bg[idx] // bg[i % bg.count]
+                x = min(x,vl.1.frame.origin.x)
+                y = min(y,vl.1.frame.origin.y)
+                r = max(r,vl.1.frame.maxX)
+                b = max(b,vl.1.frame.maxY)
             }
+            let rect = CGRect(x: x, y: y, width: r-x, height: b-y)
+            let v = UIView(frame: rect)
+            v.tag = i
+            let t = UITapGestureRecognizer(target: self, action: #selector(menuTapped(_:)))
+            v.addGestureRecognizer(t)
+            v.backgroundColor = UIColor.clear
+            imageView.addSubview(v)
         }
         
         // delegate?.boxService(self, didDetect: images)
+    }
+    
+    @objc func menuTapped(_ sender:UITapGestureRecognizer) {
+        guard let v = sender.view else { return }
+        print(v.tag)
+        if v.tag < infoData.count {
+            showInfo(index: v.tag)
+        }
+    }
+    @IBAction func infoTapped(_ sender: UITapGestureRecognizer) {
+        hideInfo()
     }
     
     private func reset() {
@@ -212,6 +298,9 @@ class ViewController: UIViewController {
         }
         layers.removeAll()
         menuSets.removeAll()
+        imageView.subviews.forEach {
+            $0.removeFromSuperview()
+        }
     }
     
     private func crop(image: UIImage, rect: CGRect) -> UIImage? {
@@ -247,5 +336,51 @@ class ViewController: UIViewController {
     }
 
 
+    
+    
+    
+    let health = HKHealthStore()
+    let heartRateType: HKQuantityType = HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate)!
+    var shownWarning : Bool = true
+    
+    func getHeartRateData() {
+        let startDate = Calendar.current.date(byAdding: .day, value: -400, to: Date())!
+        let endDate = Date()
+        let predicate = HKQuery.predicateForSamples(withStart: startDate, end: endDate, options: [])
+        let sortDescriptors = [
+            NSSortDescriptor(key: HKSampleSortIdentifierEndDate, ascending: true)
+        ]
+        
+        let heartRateQuery = HKSampleQuery(sampleType: heartRateType,
+                                           predicate: predicate,
+                                           limit: HKObjectQueryNoLimit,
+                                           sortDescriptors: sortDescriptors)
+        { (query:HKSampleQuery, results:[HKSample]?, error:Error?) -> Void in
+            guard let results = results else { return }
+            if results.count == 0 && !self.shownWarning {
+                self.shownWarning = true
+                DispatchQueue.main.async {
+                    self.showNilError()
+                }
+            } else if let r = results.first {
+                let val = r.metadata
+                print(val)
+            }
+        }
+        health.execute(heartRateQuery)
+    }
+    
+    func showNilError() {
+        let alert = UIAlertController(title: "No Heart Rate Data Found", message: "There was no heart rate data found for the selected dates. If you expected to see data, it may be that HeartRate is not authorised to read you heart rate data. Please go to the settings app (Privacy -> HealthKit) to change this.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Go to Settings", style: .default, handler:  { action in
+            if let url = URL(string:UIApplication.openSettingsURLString) {
+                if UIApplication.shared.canOpenURL(url) {
+                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                }
+            }
+        }))
+        present(alert, animated: true, completion: nil)
+    }
 }
 
