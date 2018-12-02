@@ -97,6 +97,9 @@ class ViewController: UIViewController {
         
         infoHeightConstraint.constant = 0
         view.layoutIfNeeded()
+        
+        let t = OpenCVWrapper()
+        t.openCVVersionString()
 
     }
     

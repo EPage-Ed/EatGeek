@@ -10,7 +10,6 @@ import UIKit
 import TesseractOCRSDKiOS
 import GPUImage
 
-
 protocol OCRDelegate: class {
     func result(text:String)
 }
@@ -24,13 +23,10 @@ class OCR {
             tesseract.engineMode = .cubeOnly
             tesseract.pageSegmentationMode = .auto
             
-            // Initialize our adaptive threshold filter
-        
-            let stillImageFilter = GPUImageAdaptiveThresholdFilter()
-            stillImageFilter.blurRadiusInPixels = 4.0 // adjust this to tweak the blur radius of the filter, defaults to 4.0
-            
-            // Give Tesseract the filtered image
-            tesseract.image = stillImageFilter.image(byFilteringImage: image)
+            let cvWrapper = OpenCVWrapper()
+
+            let img = cvWrapper.preprocessImage(image)
+            tesseract.image = img
             tesseract.recognize()
             delegate?.result(text: tesseract.recognizedText)
         }

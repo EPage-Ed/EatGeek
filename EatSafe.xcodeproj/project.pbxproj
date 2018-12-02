@@ -10,13 +10,13 @@
 		5D73C98B5DCFF6D430106303 /* Pods_EatSafe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7396C316135879B8B3B0CD90 /* Pods_EatSafe.framework */; };
 		8C6C515021B399B500DCFF36 /* OCR_data in Resources */ = {isa = PBXBuildFile; fileRef = 8C6C514F21B399B500DCFF36 /* OCR_data */; };
 		8C6C518121B3A14A00DCFF36 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 8C6C518021B3A14A00DCFF36 /* tessdata */; };
+		8C6C518621B3C76200DCFF36 /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8C6C518521B3C76200DCFF36 /* OpenCVWrapper.mm */; };
 		D84AE44E21B2F2DB00BE90E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84AE44D21B2F2DB00BE90E1 /* AppDelegate.swift */; };
 		D84AE45021B2F2DB00BE90E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84AE44F21B2F2DB00BE90E1 /* ViewController.swift */; };
 		D84AE45321B2F2DB00BE90E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D84AE45121B2F2DB00BE90E1 /* Main.storyboard */; };
 		D84AE45521B2F2DE00BE90E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D84AE45421B2F2DE00BE90E1 /* Assets.xcassets */; };
 		D84AE45821B2F2DE00BE90E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D84AE45621B2F2DE00BE90E1 /* LaunchScreen.storyboard */; };
 		D8EFD2C021B36D85006279B7 /* OCR.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EFD2BF21B36D85006279B7 /* OCR.swift */; };
-		D8EFD2C221B3907F006279B7 /* text.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8EFD2C121B3907F006279B7 /* text.jpg */; };
 		D8EFD2C521B3BA39006279B7 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8EFD2C421B3BA39006279B7 /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +25,9 @@
 		7396C316135879B8B3B0CD90 /* Pods_EatSafe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EatSafe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C6C514F21B399B500DCFF36 /* OCR_data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = OCR_data; sourceTree = "<group>"; };
 		8C6C518021B3A14A00DCFF36 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
+		8C6C518321B3C76200DCFF36 /* EatSafe-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EatSafe-Bridging-Header.h"; sourceTree = "<group>"; };
+		8C6C518421B3C76200DCFF36 /* OpenCVWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenCVWrapper.h; sourceTree = "<group>"; };
+		8C6C518521B3C76200DCFF36 /* OpenCVWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVWrapper.mm; sourceTree = "<group>"; };
 		D4A7519702174CE48DFBB74C /* Pods-EatSafe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatSafe.release.xcconfig"; path = "Pods/Target Support Files/Pods-EatSafe/Pods-EatSafe.release.xcconfig"; sourceTree = "<group>"; };
 		D84AE44A21B2F2DB00BE90E1 /* EatSafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EatSafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D84AE44D21B2F2DB00BE90E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -34,7 +37,6 @@
 		D84AE45721B2F2DE00BE90E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D84AE45921B2F2DE00BE90E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8EFD2BF21B36D85006279B7 /* OCR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCR.swift; sourceTree = "<group>"; };
-		D8EFD2C121B3907F006279B7 /* text.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = text.jpg; sourceTree = "<group>"; };
 		D8EFD2C321B3BA39006279B7 /* EatSafe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EatSafe.entitlements; sourceTree = "<group>"; };
 		D8EFD2C421B3BA39006279B7 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -61,9 +63,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8C6C518221B3C71100DCFF36 /* Wrappers */ = {
+			isa = PBXGroup;
+			children = (
+				8C6C518421B3C76200DCFF36 /* OpenCVWrapper.h */,
+				8C6C518521B3C76200DCFF36 /* OpenCVWrapper.mm */,
+				8C6C518321B3C76200DCFF36 /* EatSafe-Bridging-Header.h */,
+			);
+			path = Wrappers;
+			sourceTree = "<group>";
+		};
 		D84AE44121B2F2DB00BE90E1 = {
 			isa = PBXGroup;
 			children = (
+				8C6C518221B3C71100DCFF36 /* Wrappers */,
 				8C6C518021B3A14A00DCFF36 /* tessdata */,
 				D84AE44C21B2F2DB00BE90E1 /* EatSafe */,
 				D84AE44B21B2F2DB00BE90E1 /* Products */,
@@ -84,7 +97,6 @@
 			isa = PBXGroup;
 			children = (
 				D8EFD2C321B3BA39006279B7 /* EatSafe.entitlements */,
-				D8EFD2C121B3907F006279B7 /* text.jpg */,
 				D84AE44D21B2F2DB00BE90E1 /* AppDelegate.swift */,
 				D84AE44F21B2F2DB00BE90E1 /* ViewController.swift */,
 				8C6C514F21B399B500DCFF36 /* OCR_data */,
@@ -140,6 +152,7 @@
 				TargetAttributes = {
 					D84AE44921B2F2DB00BE90E1 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 						SystemCapabilities = {
 							com.apple.HealthKit = {
 								enabled = 1;
@@ -231,6 +244,7 @@
 			files = (
 				D8EFD2C021B36D85006279B7 /* OCR.swift in Sources */,
 				D84AE45021B2F2DB00BE90E1 /* ViewController.swift in Sources */,
+				8C6C518621B3C76200DCFF36 /* OpenCVWrapper.mm in Sources */,
 				D84AE44E21B2F2DB00BE90E1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,6 +392,7 @@
 			baseConfigurationReference = 65FAB44D160A1582930FDB2F /* Pods-EatSafe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = EatSafe/EatSafe.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2BY2NMR4CA;
@@ -389,6 +404,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.epage.EatSafe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Wrappers/EatSafe-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -399,6 +416,7 @@
 			baseConfigurationReference = D4A7519702174CE48DFBB74C /* Pods-EatSafe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = EatSafe/EatSafe.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2BY2NMR4CA;
@@ -410,6 +428,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.epage.EatSafe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Wrappers/EatSafe-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
