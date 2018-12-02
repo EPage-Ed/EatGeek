@@ -100,7 +100,7 @@ class ViewController: UIViewController {
     }
     
     private var layers: [CALayer] = []
-    private var menuSets = [(UIImage,CALayer)]()
+    private var menuSets = [[(UIImage,CALayer)]]()
     
     func handleVisionResults(cameraLayer: CALayer, image: UIImage, results: [VNTextObservation], on view: UIView) {
         reset()
@@ -160,16 +160,22 @@ class ViewController: UIViewController {
             
             return layer
         })
-        
+
+        // Integrate groups of text blocks into a menu item
         var y = CGFloat(-100)
-        
+        var ms = [(UIImage,CALayer)]()
         for (i,l) in layers.enumerated() {
             let img = images[i]
             if l.bounds.origin.y > y + 3 {
-                
-                
+                ms = [(UIImage,CALayer)]()
+                self.menuSets.append(ms)
+                y = l.bounds.maxY
             }
+            ms.append((img,l))
+            y += l.bounds.size.height
         }
+        
+        print(menuSets)
         
         // delegate?.boxService(self, didDetect: images)
     }
@@ -179,6 +185,7 @@ class ViewController: UIViewController {
             $0.removeFromSuperlayer()
         }
         layers.removeAll()
+        menuSets.removeAll()
     }
     
     private func crop(image: UIImage, rect: CGRect) -> UIImage? {

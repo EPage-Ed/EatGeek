@@ -13,6 +13,7 @@
 		D84AE45321B2F2DB00BE90E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D84AE45121B2F2DB00BE90E1 /* Main.storyboard */; };
 		D84AE45521B2F2DE00BE90E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D84AE45421B2F2DE00BE90E1 /* Assets.xcassets */; };
 		D84AE45821B2F2DE00BE90E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D84AE45621B2F2DE00BE90E1 /* LaunchScreen.storyboard */; };
+		D8EFD2BE21B3657C006279B7 /* OCR.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EFD2BD21B3657C006279B7 /* OCR.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +27,7 @@
 		D84AE45421B2F2DE00BE90E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D84AE45721B2F2DE00BE90E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D84AE45921B2F2DE00BE90E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D84AE45F21B30FE200BE90E1 /* CameraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
+		D8EFD2BD21B3657C006279B7 /* OCR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCR.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,11 +73,11 @@
 			children = (
 				D84AE44D21B2F2DB00BE90E1 /* AppDelegate.swift */,
 				D84AE44F21B2F2DB00BE90E1 /* ViewController.swift */,
-				D84AE45F21B30FE200BE90E1 /* CameraVC.swift */,
 				D84AE45121B2F2DB00BE90E1 /* Main.storyboard */,
 				D84AE45421B2F2DE00BE90E1 /* Assets.xcassets */,
 				D84AE45621B2F2DE00BE90E1 /* LaunchScreen.storyboard */,
 				D84AE45921B2F2DE00BE90E1 /* Info.plist */,
+				D8EFD2BD21B3657C006279B7 /* OCR.swift */,
 			);
 			path = EatSafe;
 			sourceTree = "<group>";
@@ -204,6 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8EFD2BE21B3657C006279B7 /* OCR.swift in Sources */,
 				D84AE45021B2F2DB00BE90E1 /* ViewController.swift in Sources */,
 				D84AE44E21B2F2DB00BE90E1 /* AppDelegate.swift in Sources */,
 			);
@@ -356,7 +358,10 @@
 				DEVELOPMENT_TEAM = 2BY2NMR4CA;
 				INFOPLIST_FILE = EatSafe/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.epage.EatSafe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -373,7 +378,10 @@
 				DEVELOPMENT_TEAM = 2BY2NMR4CA;
 				INFOPLIST_FILE = EatSafe/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.epage.EatSafe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

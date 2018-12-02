@@ -6,7 +6,7 @@
 	<integer>9</integer>
 	<key>logs</key>
 	<dict>
-		<key>02676A8E-8D22-42FC-A72F-0D970693F826</key>
+		<key>1149CF91-B18B-4677-9E9E-F562B4E10D3B</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -15,42 +15,19 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.target.product-type.framework</string>
 			<key>fileName</key>
-			<string>02676A8E-8D22-42FC-A72F-0D970693F826.xcactivitylog</string>
+			<string>1149CF91-B18B-4677-9E9E-F562B4E10D3B.xcactivitylog</string>
 			<key>highLevelStatus</key>
 			<string>S</string>
 			<key>signature</key>
-			<string>CameraManager-euikvgpkfbkrebbnydujbqvzsaif</string>
+			<string>Pods-EatSafe-euikvgpkfbkrebbnydujbqvzsaif</string>
 			<key>timeStartedRecording</key>
-			<real>565399882.94096506</real>
+			<real>565404883.06063604</real>
 			<key>timeStoppedRecording</key>
-			<real>565399882.94181895</real>
+			<real>565404883.11790395</real>
 			<key>title</key>
-			<string>Build target CameraManager</string>
+			<string>Build target Pods-EatSafe</string>
 			<key>uniqueIdentifier</key>
-			<string>02676A8E-8D22-42FC-A72F-0D970693F826</string>
-		</dict>
-		<key>40CB793B-14CA-416A-8935-CBAA8B4D6FDC</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
-			<key>fileName</key>
-			<string>40CB793B-14CA-416A-8935-CBAA8B4D6FDC.xcactivitylog</string>
-			<key>highLevelStatus</key>
-			<string>W</string>
-			<key>signature</key>
-			<string>EatSafe-fxxtmehpnsqltaarwybnglkkppvb</string>
-			<key>timeStartedRecording</key>
-			<real>565402187.96879995</real>
-			<key>timeStoppedRecording</key>
-			<real>565402192.32249403</real>
-			<key>title</key>
-			<string>Build target EatSafe</string>
-			<key>uniqueIdentifier</key>
-			<string>40CB793B-14CA-416A-8935-CBAA8B4D6FDC</string>
+			<string>1149CF91-B18B-4677-9E9E-F562B4E10D3B</string>
 		</dict>
 		<key>42609DA9-5718-43F1-9EB6-41AD88E9EF7A</key>
 		<dict>
@@ -75,7 +52,30 @@
 			<key>uniqueIdentifier</key>
 			<string>42609DA9-5718-43F1-9EB6-41AD88E9EF7A</string>
 		</dict>
-		<key>AED53B19-EE9B-4B9F-B1BF-A1716D17CA8F</key>
+		<key>69E74B26-396E-4255-8266-C249BDE0333C</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
+			<key>fileName</key>
+			<string>69E74B26-396E-4255-8266-C249BDE0333C.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>signature</key>
+			<string>EatSafe-fxxtmehpnsqltaarwybnglkkppvb</string>
+			<key>timeStartedRecording</key>
+			<real>565404883.12061203</real>
+			<key>timeStoppedRecording</key>
+			<real>565404889.23408699</real>
+			<key>title</key>
+			<string>Build target EatSafe</string>
+			<key>uniqueIdentifier</key>
+			<string>69E74B26-396E-4255-8266-C249BDE0333C</string>
+		</dict>
+		<key>C696F9E5-2E9C-4E04-96D7-C5CF6A09B578</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -84,19 +84,19 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.target.product-type.framework</string>
 			<key>fileName</key>
-			<string>AED53B19-EE9B-4B9F-B1BF-A1716D17CA8F.xcactivitylog</string>
+			<string>C696F9E5-2E9C-4E04-96D7-C5CF6A09B578.xcactivitylog</string>
 			<key>highLevelStatus</key>
 			<string>S</string>
 			<key>signature</key>
-			<string>Pods-EatSafe-euikvgpkfbkrebbnydujbqvzsaif</string>
+			<string>CameraManager-euikvgpkfbkrebbnydujbqvzsaif</string>
 			<key>timeStartedRecording</key>
-			<real>565399882.94270396</real>
+			<real>565404883.06716597</real>
 			<key>timeStoppedRecording</key>
-			<real>565399882.94352305</real>
+			<real>565404883.11645699</real>
 			<key>title</key>
-			<string>Build target Pods-EatSafe</string>
+			<string>Build target CameraManager</string>
 			<key>uniqueIdentifier</key>
-			<string>AED53B19-EE9B-4B9F-B1BF-A1716D17CA8F</string>
+			<string>C696F9E5-2E9C-4E04-96D7-C5CF6A09B578</string>
 		</dict>
 	</dict>
 	<key>preserveOldLogs</key>
