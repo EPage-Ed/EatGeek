@@ -13,6 +13,8 @@ The EatGeek iOS app also pulls information from HealthKit to better inform the u
 
 We used a multinomial naive bayes algorthim implemented as part of SciKit learn. We leveraged word vector counts to fit our descriptions to sugar and carb ranges. We used a data set from the USDA to train the model. It included 7,500 data points. In order to choose the ranges that we used for sugar and carb quantities, we used Jenks Natural Breaks, an algorithm suited to one dimensional clustering.
 
+The naive bayes approach is a good way to get reliable matches going quickly, but in the long run, we would want to use deep learning language models to understand relationships between menu descriptions and nutrition information. To get the data we need, we would look for a combination of published restaurant nutrition information, online recipies and the possiblity of generating recipies with a GANN using ingredients with known nutritional values to sum up and train on.
+
 
 *Key Technologies:*
 <for example: Flask, Tensor Flow, Keras>
