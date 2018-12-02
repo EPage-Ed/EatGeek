@@ -6,53 +6,7 @@
 	<integer>9</integer>
 	<key>logs</key>
 	<dict>
-		<key>1149CF91-B18B-4677-9E9E-F562B4E10D3B</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.target.product-type.framework</string>
-			<key>fileName</key>
-			<string>1149CF91-B18B-4677-9E9E-F562B4E10D3B.xcactivitylog</string>
-			<key>highLevelStatus</key>
-			<string>S</string>
-			<key>signature</key>
-			<string>Pods-EatSafe-euikvgpkfbkrebbnydujbqvzsaif</string>
-			<key>timeStartedRecording</key>
-			<real>565404883.06063604</real>
-			<key>timeStoppedRecording</key>
-			<real>565404883.11790395</real>
-			<key>title</key>
-			<string>Build target Pods-EatSafe</string>
-			<key>uniqueIdentifier</key>
-			<string>1149CF91-B18B-4677-9E9E-F562B4E10D3B</string>
-		</dict>
-		<key>42609DA9-5718-43F1-9EB6-41AD88E9EF7A</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.target.product-type.framework</string>
-			<key>fileName</key>
-			<string>42609DA9-5718-43F1-9EB6-41AD88E9EF7A.xcactivitylog</string>
-			<key>highLevelStatus</key>
-			<string>S</string>
-			<key>signature</key>
-			<string>TesseractOCRSDKiOS-euikvgpkfbkrebbnydujbqvzsaif</string>
-			<key>timeStartedRecording</key>
-			<real>565399882.93756604</real>
-			<key>timeStoppedRecording</key>
-			<real>565399882.94054198</real>
-			<key>title</key>
-			<string>Build target TesseractOCRSDKiOS</string>
-			<key>uniqueIdentifier</key>
-			<string>42609DA9-5718-43F1-9EB6-41AD88E9EF7A</string>
-		</dict>
-		<key>69E74B26-396E-4255-8266-C249BDE0333C</key>
+		<key>33580105-F732-405F-BE44-A830D244DF77</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -61,21 +15,21 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
 			<key>fileName</key>
-			<string>69E74B26-396E-4255-8266-C249BDE0333C.xcactivitylog</string>
+			<string>33580105-F732-405F-BE44-A830D244DF77.xcactivitylog</string>
 			<key>highLevelStatus</key>
 			<string>W</string>
 			<key>signature</key>
 			<string>EatSafe-fxxtmehpnsqltaarwybnglkkppvb</string>
 			<key>timeStartedRecording</key>
-			<real>565404883.12061203</real>
+			<real>565414479.02957499</real>
 			<key>timeStoppedRecording</key>
-			<real>565404889.23408699</real>
+			<real>565414483.71069705</real>
 			<key>title</key>
 			<string>Build target EatSafe</string>
 			<key>uniqueIdentifier</key>
-			<string>69E74B26-396E-4255-8266-C249BDE0333C</string>
+			<string>33580105-F732-405F-BE44-A830D244DF77</string>
 		</dict>
-		<key>C696F9E5-2E9C-4E04-96D7-C5CF6A09B578</key>
+		<key>8750CD8F-1049-4635-B45B-644EAFEA05F5</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -84,19 +38,65 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.target.product-type.framework</string>
 			<key>fileName</key>
-			<string>C696F9E5-2E9C-4E04-96D7-C5CF6A09B578.xcactivitylog</string>
+			<string>8750CD8F-1049-4635-B45B-644EAFEA05F5.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>signature</key>
+			<string>Pods-EatSafe-euikvgpkfbkrebbnydujbqvzsaif</string>
+			<key>timeStartedRecording</key>
+			<real>565407110.04090297</real>
+			<key>timeStoppedRecording</key>
+			<real>565407110.07822597</real>
+			<key>title</key>
+			<string>Build target Pods-EatSafe</string>
+			<key>uniqueIdentifier</key>
+			<string>8750CD8F-1049-4635-B45B-644EAFEA05F5</string>
+		</dict>
+		<key>87BA0FE1-5FB8-45D3-A6E2-532C8D6FC9D4</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.framework</string>
+			<key>fileName</key>
+			<string>87BA0FE1-5FB8-45D3-A6E2-532C8D6FC9D4.xcactivitylog</string>
 			<key>highLevelStatus</key>
 			<string>S</string>
 			<key>signature</key>
 			<string>CameraManager-euikvgpkfbkrebbnydujbqvzsaif</string>
 			<key>timeStartedRecording</key>
-			<real>565404883.06716597</real>
+			<real>565407027.27619696</real>
 			<key>timeStoppedRecording</key>
-			<real>565404883.11645699</real>
+			<real>565407027.327649</real>
 			<key>title</key>
 			<string>Build target CameraManager</string>
 			<key>uniqueIdentifier</key>
-			<string>C696F9E5-2E9C-4E04-96D7-C5CF6A09B578</string>
+			<string>87BA0FE1-5FB8-45D3-A6E2-532C8D6FC9D4</string>
+		</dict>
+		<key>976CF9B4-D6B3-4FF0-BDDD-6FC7133838BC</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.framework</string>
+			<key>fileName</key>
+			<string>976CF9B4-D6B3-4FF0-BDDD-6FC7133838BC.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>signature</key>
+			<string>TesseractOCRSDKiOS-euikvgpkfbkrebbnydujbqvzsaif</string>
+			<key>timeStartedRecording</key>
+			<real>565407699.84731901</real>
+			<key>timeStoppedRecording</key>
+			<real>565407699.88906205</real>
+			<key>title</key>
+			<string>Build target TesseractOCRSDKiOS</string>
+			<key>uniqueIdentifier</key>
+			<string>976CF9B4-D6B3-4FF0-BDDD-6FC7133838BC</string>
 		</dict>
 	</dict>
 	<key>preserveOldLogs</key>

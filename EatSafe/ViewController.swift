@@ -108,11 +108,11 @@ class ViewController: UIViewController {
         let results = results.filter{ $0.confidence > 0.5 }
         var images = [UIImage]()
         
-        layers = results.map({ result in
+        layers = results.compactMap({ result in
             let layer = CALayer()
             view.layer.addSublayer(layer)
             // layer.borderWidth = 2
-            layer.backgroundColor = UIColor.yellow.withAlphaComponent(0.2).cgColor
+            // layer.backgroundColor = UIColor.yellow.withAlphaComponent(0.2).cgColor
             // layer.borderColor = UIColor.green.cgColor
             
             do {
@@ -129,12 +129,15 @@ class ViewController: UIViewController {
                 
                 if let croppedImage = crop(image: image, rect: biggerRect) {
                     images.append(croppedImage)
-                    print(croppedImage)
+                    // print(croppedImage)
+                } else {
+                    print("Skip: \(result.boundingBox)")
+                    return nil
                 }
             }
             
             do {
-                print(result.boundingBox)
+                // print(result.boundingBox)
                 
                 // Convert found bounding box to frame in displayed image (using aspect fit)
                 
@@ -153,6 +156,7 @@ class ViewController: UIViewController {
                 let lh = h * b.size.height
                 
                 layer.frame = CGRect(x: lx, y: ly, width: lw, height: lh)
+                print(layer.frame)
                 
                 // let rect = cameraLayer.layerRectConverted(fromMetadataOutputRect: result.boundingBox)
                 // layer.frame = rect
@@ -166,16 +170,37 @@ class ViewController: UIViewController {
         var ms = [(UIImage,CALayer)]()
         for (i,l) in layers.enumerated() {
             let img = images[i]
-            if l.bounds.origin.y > y + 3 {
+            if l.frame.origin.y > y + 4 {
+                print("\(ms.count) Gap: \(l.frame.origin.y - y)")
+                if !ms.isEmpty {
+                    self.menuSets.append(ms)
+                }
                 ms = [(UIImage,CALayer)]()
-                self.menuSets.append(ms)
-                y = l.bounds.maxY
+                y = l.frame.maxY
             }
             ms.append((img,l))
-            y += l.bounds.size.height
+            y = max(l.frame.maxY,y)
+            if i >= layers.count-1 && !ms.isEmpty {
+                print("\(ms.count) Gap: \(l.frame.origin.y - y)")
+                self.menuSets.append(ms)
+            }
         }
-        
-        print(menuSets)
+
+        // print(menuSets)
+
+        let bg = [
+            UIColor.green.withAlphaComponent(0.2).cgColor,
+            UIColor.red.withAlphaComponent(0.2).cgColor,
+            UIColor.blue.withAlphaComponent(0.2).cgColor,
+            UIColor.magenta.withAlphaComponent(0.2).cgColor,
+            UIColor.cyan.withAlphaComponent(0.2).cgColor,
+            UIColor.orange.withAlphaComponent(0.2).cgColor
+        ]
+        for (i,ms) in menuSets.enumerated() {
+            for vl in ms {
+                vl.1.backgroundColor = bg[i % bg.count]
+            }
+        }
         
         // delegate?.boxService(self, didDetect: images)
     }
