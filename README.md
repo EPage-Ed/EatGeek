@@ -19,7 +19,8 @@ We used a data set from the USDA to train the model. It included 7,500 data poin
 <for example: Flask, Tensor Flow, Keras>
 
 iOS: Vision Framework, CoreML, OpenCV, GPUImage, Tesseract
-Scikitlearn
+
+ML: Scikitlearn
 
 *Steps to Build and Test:*
 <Please list and describe all steps necessary to build and run this product/service>
