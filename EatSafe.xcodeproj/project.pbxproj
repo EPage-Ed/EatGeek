@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5D73C98B5DCFF6D430106303 /* Pods_EatSafe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7396C316135879B8B3B0CD90 /* Pods_EatSafe.framework */; };
-		8C6C513F21B374F600DCFF36 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 8C6C513E21B374F600DCFF36 /* tessdata */; };
+		8C6C515021B399B500DCFF36 /* OCR_data in Resources */ = {isa = PBXBuildFile; fileRef = 8C6C514F21B399B500DCFF36 /* OCR_data */; };
+		8C6C518121B3A14A00DCFF36 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 8C6C518021B3A14A00DCFF36 /* tessdata */; };
 		D84AE44E21B2F2DB00BE90E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84AE44D21B2F2DB00BE90E1 /* AppDelegate.swift */; };
 		D84AE45021B2F2DB00BE90E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84AE44F21B2F2DB00BE90E1 /* ViewController.swift */; };
 		D84AE45321B2F2DB00BE90E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D84AE45121B2F2DB00BE90E1 /* Main.storyboard */; };
@@ -22,7 +23,8 @@
 /* Begin PBXFileReference section */
 		65FAB44D160A1582930FDB2F /* Pods-EatSafe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatSafe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EatSafe/Pods-EatSafe.debug.xcconfig"; sourceTree = "<group>"; };
 		7396C316135879B8B3B0CD90 /* Pods_EatSafe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EatSafe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8C6C513E21B374F600DCFF36 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
+		8C6C514F21B399B500DCFF36 /* OCR_data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = OCR_data; sourceTree = "<group>"; };
+		8C6C518021B3A14A00DCFF36 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
 		D4A7519702174CE48DFBB74C /* Pods-EatSafe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatSafe.release.xcconfig"; path = "Pods/Target Support Files/Pods-EatSafe/Pods-EatSafe.release.xcconfig"; sourceTree = "<group>"; };
 		D84AE44A21B2F2DB00BE90E1 /* EatSafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EatSafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D84AE44D21B2F2DB00BE90E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,7 +64,7 @@
 		D84AE44121B2F2DB00BE90E1 = {
 			isa = PBXGroup;
 			children = (
-				8C6C513E21B374F600DCFF36 /* tessdata */,
+				8C6C518021B3A14A00DCFF36 /* tessdata */,
 				D84AE44C21B2F2DB00BE90E1 /* EatSafe */,
 				D84AE44B21B2F2DB00BE90E1 /* Products */,
 				DAB64BB26DD036BEAC664357 /* Pods */,
@@ -85,6 +87,7 @@
 				D8EFD2C121B3907F006279B7 /* text.jpg */,
 				D84AE44D21B2F2DB00BE90E1 /* AppDelegate.swift */,
 				D84AE44F21B2F2DB00BE90E1 /* ViewController.swift */,
+				8C6C514F21B399B500DCFF36 /* OCR_data */,
 				D8EFD2BF21B36D85006279B7 /* OCR.swift */,
 				D84AE45121B2F2DB00BE90E1 /* Main.storyboard */,
 				D84AE45421B2F2DE00BE90E1 /* Assets.xcassets */,
@@ -169,8 +172,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D84AE45821B2F2DE00BE90E1 /* LaunchScreen.storyboard in Resources */,
-				D8EFD2C221B3907F006279B7 /* text.jpg in Resources */,
-				8C6C513F21B374F600DCFF36 /* tessdata in Resources */,
+				8C6C515021B399B500DCFF36 /* OCR_data in Resources */,
+				8C6C518121B3A14A00DCFF36 /* tessdata in Resources */,
 				D84AE45521B2F2DE00BE90E1 /* Assets.xcassets in Resources */,
 				D84AE45321B2F2DB00BE90E1 /* Main.storyboard in Resources */,
 			);
