@@ -99,6 +99,8 @@ class ViewController: UIViewController {
         infoHeightConstraint.constant = 0
         view.layoutIfNeeded()
         
+        let t = OpenCVWrapper()
+        t.openCVVersionString()
         let heartRateType: HKQuantityType   = HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate)!
         
         HKHealthStore().requestAuthorization(toShare: nil, read: [heartRateType]) {(success, error) in

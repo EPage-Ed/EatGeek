@@ -1,70 +1,51 @@
     import re
-
     import numpy as np
 
-    
-
     from sklearn.naive_bayes import MultinomialNB
-
     from sklearn.feature_extraction.text import CountVectorizer
-
     import pandas as pd
-
     from collections import Counter
-
     from sklearn.model_selection import train_test_split
-
     from sklearn.feature_extraction.text import TfidfTransformer
 
-    
-
     import jenkspy
-
     import matplotlib.pyplot as plt
-
     plt.style.use('seaborn-poster')
 
     %matplotlib inline
     import nltk
 
     from nltk.stem import LancasterStemmer
+
     def text_preprocessing(food_name):
 
         # Remove all the special characters
 
         line = re.sub(r'\\W', ' ', food_name)
 
-    
 
         # remove all single characters
 
         line = re.sub(r'\\s+[a-zA-Z]\\s+', ' ', line)
 
-    
 
         # Remove single characters from the start
 
         line = re.sub(r'\\^[a-zA-Z]\\s+', ' ', line) 
 
-    
 
         # Substituting multiple spaces with single space
 
         line = re.sub(r'\\s+', ' ', line, flags=re.I)
 
-    
 
         # Converting to Lowercase
 
         line = line.lower()
 
-    
-
         # Lemmatization
 
         line = line.split()
-
-        
 
         lancaster=LancasterStemmer()
 
@@ -72,13 +53,12 @@
 
         line = ' '.join(line)
 
-    
-
         return line
-    menu_sentence = \"CALIFORNIA CHOPPED KALE. AVOCADO. RED PEPPER. CUCUMBER. PISTACHIO. WHITE BALSAMIC. GF\"
+
+    menu_sentence = "CALIFORNIA CHOPPED KALE. AVOCADO. RED PEPPER. CUCUMBER. PISTACHIO. WHITE BALSAMIC. GF"
     text_preprocessing(menu_sentence)
-    df = pd.read_excel(\"data/supertrackerfooddatabase.xlsx\", sheet_name=\"Nutrients\")
-    del df[\"Action\"]
+    df = pd.read_excel("data/supertrackerfooddatabase.xlsx", sheet_name="Nutrients")
+    del df["Action"]
     df.columns
     feature = '_269 Sugars, total (g)'
     df.describe()['_269 Sugars, total (g)']
@@ -97,29 +77,24 @@
 
     feature_list = np.array(feature_list)
 
-    
 
     count_vect = CountVectorizer()
 
     x_train_counts = count_vect.fit_transform(foodname_list)
 
-    
 
     tfidf_transformer = TfidfTransformer()
 
     x_train_tfidf = tfidf_transformer.fit_transform(x_train_counts)
 
-    
 
     train_x, test_x, train_y, test_y = train_test_split(x_train_tfidf, feature_list, test_size=0.3)
 
-    
 
     clf = MultinomialNB().fit(train_x, train_y)
 
     y_score = clf.predict(test_x)
 
-    
 
     n_right = 0
 
@@ -129,16 +104,14 @@
 
             n_right += 1
 
-    
 
-    print(\"Accuracy: %.2f%%\" % ((n_right/float(len(test_y)) * 100)))
-    to_test = [\"Bacon Ranch Grilled Chicken Salad Artisan grilled chicken\", \"Real fruit for a real treat. Fruit 'N Yogurt Parfait Creamy Fruit ‘N Yogurt Parfait with low-fat vanilla yogurt, layers of plump blueberries and sweet strawberries, and a crunchy granola topping\",
+    print("Accuracy: %.2f%%" % ((n_right/float(len(test_y)) * 100)))
+    to_test = ["Bacon Ranch Grilled Chicken Salad Artisan grilled chicken", "Real fruit for a real treat. Fruit 'N Yogurt Parfait Creamy Fruit ‘N Yogurt Parfait with low-fat vanilla yogurt, layers of plump blueberries and sweet strawberries, and a crunchy granola topping",
 
-              \"Coca-Cola\"]
+              "Coca-Cola"]
 
     x_train_counts = count_vect.transform(to_test)
 
-    
 
     x_train_tfidf = tfidf_transformer.transform(x_train_counts)
 
@@ -150,8 +123,6 @@
         breaks = jenkspy.jenks_breaks(array, nb_class)
 
         return breaks
-
-    
 
     breaks = get_breaks_jenks(nutrients_df[feature])
 
