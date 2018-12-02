@@ -30,7 +30,7 @@ class SettingsVC: UIViewController {
     ]
     
     func populateDiets() {
-        let sz : CGFloat = 80
+        let sz : CGFloat = 60
         if dietSV == nil { return }
         for (i,d) in diets.enumerated() {
             let y : CGFloat = CGFloat(i) * sz + 10
@@ -40,7 +40,7 @@ class SettingsVC: UIViewController {
             b.isChecked = i == 0
             dietSV.addSubview(b)
             let l = UILabel(frame: CGRect(x: sz, y: y, width: dietSV.bounds.size.width - sz, height: sz-10))
-            l.font = UIFont.systemFont(ofSize: 32)
+            l.font = UIFont.systemFont(ofSize: 28)
             l.textColor = .white
             l.text = d
             dietSV.addSubview(l)

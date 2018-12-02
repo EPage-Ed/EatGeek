@@ -68,6 +68,14 @@ class ViewController: UIViewController {
         "GIANT ONION RINGS\nCalories: 690\nCarbs: 155g\nSugars: 33g"
     ]
     
+    let menuData = [
+        "Loaded Fries queso monterey jack cheddar bacon green onions bbq ranch",
+        "Spinach Florentine Flatbread spinach artichoke hearts monterey jack parmesan romano tomatoes garlic fresh basil crushed red pepper oregano",
+        "BBQ Chicken Flatbread chipotle chicken bbq sauce monterey jack cheddar cilantro red peppers red onions",
+        "Crispy Brussels Sprouts lemon soy vinaigrette roasted onions croutons cotija cheese",
+        "Giant Onion Rings bbq ranch"
+    ]
+    
     let infoColors = [ 2, 0, 1, 0, 1 ]
     
     func showInfo(index:Int) {
@@ -77,6 +85,14 @@ class ViewController: UIViewController {
             self.view.layoutIfNeeded()
         }
         
+    }
+    
+    func showNutrition(text:String) {
+        infoLabel.text = text
+        infoHeightConstraint.constant = 180
+        UIView.animate(withDuration: 0.4) {
+            self.view.layoutIfNeeded()
+        }
     }
     
     func hideInfo() {
@@ -285,8 +301,15 @@ class ViewController: UIViewController {
         guard let v = sender.view else { return }
         print(v.tag)
         if v.tag < infoData.count {
-            showInfo(index: v.tag)
+            let text = menuData[v.tag]
+            getNutrition(text: text) { nutrition in
+                // showInfo(index: v.tag)
+                DispatchQueue.main.async {
+                    self.showNutrition(text: nutrition)
+                }
+            }
         }
+        
     }
     @IBAction func infoTapped(_ sender: UITapGestureRecognizer) {
         hideInfo()
@@ -334,6 +357,38 @@ class ViewController: UIViewController {
             return CGImagePropertyOrientation.rightMirrored
         }
     }
+    
+    
+    
+    
+    
+    
+    func getNutrition(text:String, callback: @escaping (String)->()) {
+        guard let d = text.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else { print("Bad Description"); return }
+        guard let url = URL(string: "https://eatgeek.herokuapp.com/nutrition?desciption=\(d)") else { print("bad url"); return}
+        let req = URLRequest(url: url)
+        let task = URLSession.shared.dataTask(with: req) { data, response, error in
+            if error != nil {
+                print(error)
+                return
+            }
+            guard let data = data else { print("No Data"); return }
+            if let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String:String] {
+                let carbs = json?["carbohydrates"] ?? "Unknown"
+                let sugars = json?["sugar"] ?? "Unknown"
+                
+                callback("Carbs: \(carbs)\nSugars: \(sugars)")
+            } else {
+                print("Bad JSON")
+            }
+        }
+        task.resume()
+    }
+    
+    
+    
+    
+    
 
 
     

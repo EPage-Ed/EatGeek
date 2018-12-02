@@ -6,6 +6,35 @@
 	<integer>9</integer>
 	<key>logs</key>
 	<dict>
+		<key>1AA57186-E9A6-4E13-B9E7-230DC1A644E4</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>1AA57186-E9A6-4E13-B9E7-230DC1A644E4.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>E</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>EatSafe project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>EatSafe</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build EatSafe</string>
+			<key>timeStartedRecording</key>
+			<real>565461355.70984602</real>
+			<key>timeStoppedRecording</key>
+			<real>565461356.61333394</real>
+			<key>title</key>
+			<string>Build EatSafe</string>
+			<key>uniqueIdentifier</key>
+			<string>1AA57186-E9A6-4E13-B9E7-230DC1A644E4</string>
+		</dict>
 		<key>1F95A4C6-3FBD-44B8-B03D-715ECDE40C90</key>
 		<dict>
 			<key>className</key>
@@ -64,6 +93,35 @@
 			<key>uniqueIdentifier</key>
 			<string>2C66740E-B4EC-4D71-ABC9-3C88EA458E94</string>
 		</dict>
+		<key>38646E2A-7CB4-4EDD-878F-E988239910A7</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>38646E2A-7CB4-4EDD-878F-E988239910A7.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>EatSafe project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>EatSafe</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build EatSafe</string>
+			<key>timeStartedRecording</key>
+			<real>565461700.66153598</real>
+			<key>timeStoppedRecording</key>
+			<real>565461709.15143895</real>
+			<key>title</key>
+			<string>Build EatSafe</string>
+			<key>uniqueIdentifier</key>
+			<string>38646E2A-7CB4-4EDD-878F-E988239910A7</string>
+		</dict>
 		<key>3B3EC828-D90B-4B5D-A219-1749F4ADBF70</key>
 		<dict>
 			<key>className</key>
@@ -92,6 +150,35 @@
 			<string>Build EatSafe</string>
 			<key>uniqueIdentifier</key>
 			<string>3B3EC828-D90B-4B5D-A219-1749F4ADBF70</string>
+		</dict>
+		<key>45E914D0-B0B0-4AC2-A819-2F9932673B3D</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>45E914D0-B0B0-4AC2-A819-2F9932673B3D.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>EatSafe project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>EatSafe</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build EatSafe</string>
+			<key>timeStartedRecording</key>
+			<real>565462578.07624698</real>
+			<key>timeStoppedRecording</key>
+			<real>565462584.07225597</real>
+			<key>title</key>
+			<string>Build EatSafe</string>
+			<key>uniqueIdentifier</key>
+			<string>45E914D0-B0B0-4AC2-A819-2F9932673B3D</string>
 		</dict>
 		<key>47AD23CC-970E-4086-95D7-D5B0C4D663A1</key>
 		<dict>
@@ -267,6 +354,93 @@
 			<key>uniqueIdentifier</key>
 			<string>84B3ED6F-EFCE-4E09-BE25-7303FC05F231</string>
 		</dict>
+		<key>8A32C332-24F2-4F1E-9E72-4E43B94E3C98</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>8A32C332-24F2-4F1E-9E72-4E43B94E3C98.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>EatSafe project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>EatSafe</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build EatSafe</string>
+			<key>timeStartedRecording</key>
+			<real>565462089.09622204</real>
+			<key>timeStoppedRecording</key>
+			<real>565462099.68852496</real>
+			<key>title</key>
+			<string>Build EatSafe</string>
+			<key>uniqueIdentifier</key>
+			<string>8A32C332-24F2-4F1E-9E72-4E43B94E3C98</string>
+		</dict>
+		<key>9D521EE2-4F2E-4810-A834-4B9BBCEDE624</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>9D521EE2-4F2E-4810-A834-4B9BBCEDE624.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>EatSafe project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>EatSafe</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build EatSafe</string>
+			<key>timeStartedRecording</key>
+			<real>565459696.10306203</real>
+			<key>timeStoppedRecording</key>
+			<real>565459705.68668699</real>
+			<key>title</key>
+			<string>Build EatSafe</string>
+			<key>uniqueIdentifier</key>
+			<string>9D521EE2-4F2E-4810-A834-4B9BBCEDE624</string>
+		</dict>
+		<key>A4FE2391-4ABE-4FE9-9F09-A4313A3C4B5C</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>A4FE2391-4ABE-4FE9-9F09-A4313A3C4B5C.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>EatSafe project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>EatSafe</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build EatSafe</string>
+			<key>timeStartedRecording</key>
+			<real>565461480.00770795</real>
+			<key>timeStoppedRecording</key>
+			<real>565461493.00874996</real>
+			<key>title</key>
+			<string>Build EatSafe</string>
+			<key>uniqueIdentifier</key>
+			<string>A4FE2391-4ABE-4FE9-9F09-A4313A3C4B5C</string>
+		</dict>
 		<key>A5B077E3-8BF4-49E5-AD31-7ED94FECF122</key>
 		<dict>
 			<key>className</key>
@@ -441,6 +615,122 @@
 			<key>uniqueIdentifier</key>
 			<string>CB5B5DC3-9E53-42F8-876A-F8FBF820A3AB</string>
 		</dict>
+		<key>D38FE00B-5A6C-4024-A109-C0E4A7CD3EF5</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>D38FE00B-5A6C-4024-A109-C0E4A7CD3EF5.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>EatSafe project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>EatSafe</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build EatSafe</string>
+			<key>timeStartedRecording</key>
+			<real>565462268.12079895</real>
+			<key>timeStoppedRecording</key>
+			<real>565462276.65494597</real>
+			<key>title</key>
+			<string>Build EatSafe</string>
+			<key>uniqueIdentifier</key>
+			<string>D38FE00B-5A6C-4024-A109-C0E4A7CD3EF5</string>
+		</dict>
+		<key>D409AFFF-880B-4755-8244-D8A5529BCC55</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>D409AFFF-880B-4755-8244-D8A5529BCC55.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>EatSafe project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>EatSafe</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build EatSafe</string>
+			<key>timeStartedRecording</key>
+			<real>565461581.89838195</real>
+			<key>timeStoppedRecording</key>
+			<real>565461592.35424399</real>
+			<key>title</key>
+			<string>Build EatSafe</string>
+			<key>uniqueIdentifier</key>
+			<string>D409AFFF-880B-4755-8244-D8A5529BCC55</string>
+		</dict>
+		<key>D9807A35-2BD9-41FD-9434-EFE85948F31D</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>D9807A35-2BD9-41FD-9434-EFE85948F31D.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>EatSafe project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>EatSafe</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build EatSafe</string>
+			<key>timeStartedRecording</key>
+			<real>565462453.71901703</real>
+			<key>timeStoppedRecording</key>
+			<real>565462463.29679</real>
+			<key>title</key>
+			<string>Build EatSafe</string>
+			<key>uniqueIdentifier</key>
+			<string>D9807A35-2BD9-41FD-9434-EFE85948F31D</string>
+		</dict>
+		<key>DE0EEA8E-1630-407A-ABE0-90DE36074BE9</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>DE0EEA8E-1630-407A-ABE0-90DE36074BE9.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>E</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>EatSafe project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>EatSafe</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build EatSafe</string>
+			<key>timeStartedRecording</key>
+			<real>565461433.60594499</real>
+			<key>timeStoppedRecording</key>
+			<real>565461435.15900695</real>
+			<key>title</key>
+			<string>Build EatSafe</string>
+			<key>uniqueIdentifier</key>
+			<string>DE0EEA8E-1630-407A-ABE0-90DE36074BE9</string>
+		</dict>
 		<key>EEBD1F25-5BFD-49B4-82F8-A80165CBEC81</key>
 		<dict>
 			<key>className</key>
@@ -469,6 +759,35 @@
 			<string>Build EatSafe</string>
 			<key>uniqueIdentifier</key>
 			<string>EEBD1F25-5BFD-49B4-82F8-A80165CBEC81</string>
+		</dict>
+		<key>F20D1106-34E6-462A-A94E-2FDE54AE20B7</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>F20D1106-34E6-462A-A94E-2FDE54AE20B7.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>EatSafe project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>EatSafe</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build EatSafe</string>
+			<key>timeStartedRecording</key>
+			<real>565461975.14755404</real>
+			<key>timeStoppedRecording</key>
+			<real>565461985.18410504</real>
+			<key>title</key>
+			<string>Build EatSafe</string>
+			<key>uniqueIdentifier</key>
+			<string>F20D1106-34E6-462A-A94E-2FDE54AE20B7</string>
 		</dict>
 		<key>F2FAE4F6-1DA1-4A11-B193-FD52DAD825CD</key>
 		<dict>
