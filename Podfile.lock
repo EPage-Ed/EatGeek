@@ -11,7 +11,7 @@ DEPENDENCIES:
   - TesseractOCRSDKiOS
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - CameraManager
     - GPUImage
     - OpenCV
@@ -25,4 +25,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: dd92ba2ab4e6adb2d5559071b8aa0931d0b97348
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.5.0

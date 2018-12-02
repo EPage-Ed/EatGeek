@@ -11,6 +11,9 @@
 		8C6C515021B399B500DCFF36 /* OCR_data in Resources */ = {isa = PBXBuildFile; fileRef = 8C6C514F21B399B500DCFF36 /* OCR_data */; };
 		8C6C518121B3A14A00DCFF36 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 8C6C518021B3A14A00DCFF36 /* tessdata */; };
 		8C6C518621B3C76200DCFF36 /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8C6C518521B3C76200DCFF36 /* OpenCVWrapper.mm */; };
+		D83BA98721B3E08400143A5A /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83BA98621B3E08400143A5A /* SplashVC.swift */; };
+		D83BA98921B3E57E00143A5A /* CheckButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83BA98821B3E57E00143A5A /* CheckButton.swift */; };
+		D83BA98B21B3EB0C00143A5A /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83BA98A21B3EB0C00143A5A /* SettingsVC.swift */; };
 		D84AE44E21B2F2DB00BE90E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84AE44D21B2F2DB00BE90E1 /* AppDelegate.swift */; };
 		D84AE45021B2F2DB00BE90E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84AE44F21B2F2DB00BE90E1 /* ViewController.swift */; };
 		D84AE45321B2F2DB00BE90E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D84AE45121B2F2DB00BE90E1 /* Main.storyboard */; };
@@ -29,6 +32,9 @@
 		8C6C518421B3C76200DCFF36 /* OpenCVWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenCVWrapper.h; sourceTree = "<group>"; };
 		8C6C518521B3C76200DCFF36 /* OpenCVWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVWrapper.mm; sourceTree = "<group>"; };
 		D4A7519702174CE48DFBB74C /* Pods-EatSafe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatSafe.release.xcconfig"; path = "Pods/Target Support Files/Pods-EatSafe/Pods-EatSafe.release.xcconfig"; sourceTree = "<group>"; };
+		D83BA98621B3E08400143A5A /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
+		D83BA98821B3E57E00143A5A /* CheckButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckButton.swift; sourceTree = "<group>"; };
+		D83BA98A21B3EB0C00143A5A /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		D84AE44A21B2F2DB00BE90E1 /* EatSafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EatSafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D84AE44D21B2F2DB00BE90E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D84AE44F21B2F2DB00BE90E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +105,9 @@
 				D8EFD2C321B3BA39006279B7 /* EatSafe.entitlements */,
 				D84AE44D21B2F2DB00BE90E1 /* AppDelegate.swift */,
 				D84AE44F21B2F2DB00BE90E1 /* ViewController.swift */,
+				D83BA98A21B3EB0C00143A5A /* SettingsVC.swift */,
+				D83BA98821B3E57E00143A5A /* CheckButton.swift */,
+				D83BA98621B3E08400143A5A /* SplashVC.swift */,
 				8C6C514F21B399B500DCFF36 /* OCR_data */,
 				D8EFD2BF21B36D85006279B7 /* OCR.swift */,
 				D84AE45121B2F2DB00BE90E1 /* Main.storyboard */,
@@ -243,9 +252,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8EFD2C021B36D85006279B7 /* OCR.swift in Sources */,
+				D83BA98721B3E08400143A5A /* SplashVC.swift in Sources */,
 				D84AE45021B2F2DB00BE90E1 /* ViewController.swift in Sources */,
 				8C6C518621B3C76200DCFF36 /* OpenCVWrapper.mm in Sources */,
+				D83BA98921B3E57E00143A5A /* CheckButton.swift in Sources */,
 				D84AE44E21B2F2DB00BE90E1 /* AppDelegate.swift in Sources */,
+				D83BA98B21B3EB0C00143A5A /* SettingsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

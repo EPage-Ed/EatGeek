@@ -9,6 +9,7 @@
 import UIKit
 import Vision
 import AVFoundation
+import HealthKit
 import CameraManager
 
 class ViewController: UIViewController {
@@ -100,6 +101,13 @@ class ViewController: UIViewController {
         
         let t = OpenCVWrapper()
         t.openCVVersionString()
+        let heartRateType: HKQuantityType   = HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate)!
+        
+        HKHealthStore().requestAuthorization(toShare: nil, read: [heartRateType]) {(success, error) in
+            print(success)
+            //Success will always be equal to true unless a genuine error occurs
+            self.getHeartRateData()
+        }
 
     }
     
@@ -241,6 +249,7 @@ class ViewController: UIViewController {
         let bg = [
             UIColor.green.withAlphaComponent(0.2).cgColor,
             UIColor.red.withAlphaComponent(0.2).cgColor,
+            UIColor.yellow.withAlphaComponent(0.2).cgColor,
             UIColor.blue.withAlphaComponent(0.2).cgColor,
             UIColor.magenta.withAlphaComponent(0.2).cgColor,
             UIColor.cyan.withAlphaComponent(0.2).cgColor,
@@ -327,5 +336,51 @@ class ViewController: UIViewController {
     }
 
 
+    
+    
+    
+    let health = HKHealthStore()
+    let heartRateType: HKQuantityType = HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate)!
+    var shownWarning : Bool = true
+    
+    func getHeartRateData() {
+        let startDate = Calendar.current.date(byAdding: .day, value: -400, to: Date())!
+        let endDate = Date()
+        let predicate = HKQuery.predicateForSamples(withStart: startDate, end: endDate, options: [])
+        let sortDescriptors = [
+            NSSortDescriptor(key: HKSampleSortIdentifierEndDate, ascending: true)
+        ]
+        
+        let heartRateQuery = HKSampleQuery(sampleType: heartRateType,
+                                           predicate: predicate,
+                                           limit: HKObjectQueryNoLimit,
+                                           sortDescriptors: sortDescriptors)
+        { (query:HKSampleQuery, results:[HKSample]?, error:Error?) -> Void in
+            guard let results = results else { return }
+            if results.count == 0 && !self.shownWarning {
+                self.shownWarning = true
+                DispatchQueue.main.async {
+                    self.showNilError()
+                }
+            } else if let r = results.first {
+                let val = r.metadata
+                print(val)
+            }
+        }
+        health.execute(heartRateQuery)
+    }
+    
+    func showNilError() {
+        let alert = UIAlertController(title: "No Heart Rate Data Found", message: "There was no heart rate data found for the selected dates. If you expected to see data, it may be that HeartRate is not authorised to read you heart rate data. Please go to the settings app (Privacy -> HealthKit) to change this.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Go to Settings", style: .default, handler:  { action in
+            if let url = URL(string:UIApplication.openSettingsURLString) {
+                if UIApplication.shared.canOpenURL(url) {
+                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                }
+            }
+        }))
+        present(alert, animated: true, completion: nil)
+    }
 }
 
