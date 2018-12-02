@@ -11,8 +11,7 @@ The EatGeek iOS app uses numerous technologies to achieve its features. The Visi
 
 The EatGeek iOS app also pulls information from HealthKit to better inform the user and improve recommendations. For example, a user with diabetes can record their glucose levels using whatever method they prefer. This information gets stored by HealthKit, and the EatGeek app asks for permission to access it.
 
-We constructed a Baysian Inferrence engine to classify the nutrition content of a menu item. [What it Does]
-We used a data set from the USDA to train the model. It included 7,500 data points.
+We used a multinomial naive bayes algorthim implemented as part of SciKit learn. We leveraged word vector counts to fit our descriptions to sugar and carb ranges. We used a data set from the USDA to train the model. It included 7,500 data points. In order to choose the ranges that we used for sugar and carb quantities, we used Jenks Natural Breaks, an algorithm suited to one dimensional clustering.
 
 
 *Key Technologies:*
