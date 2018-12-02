@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Settings-->
         <scene sceneID="rDP-TI-ETR">
             <objects>
                 <viewController id="b1n-Um-gzN" sceneMemberID="viewController">
@@ -20,13 +20,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="3dB-f9-Cyn"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="jMx-9Z-tYJ"/>
+                    <tabBarItem key="tabBarItem" title="Settings" id="jMx-9Z-tYJ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lbf-Ve-zAc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="54" y="701"/>
         </scene>
-        <!--Item 1-->
+        <!--Camera-->
         <scene sceneID="Epd-AM-ZrW">
             <objects>
                 <viewController id="v6p-TI-wcG" customClass="ViewController" customModule="EatSafe" customModuleProvider="target" sceneMemberID="viewController">
@@ -38,30 +38,67 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bBf-h0-te2">
-                                <rect key="frame" x="164.5" y="578" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bBf-h0-te2">
+                                <rect key="frame" x="154.5" y="566" width="66" height="42"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.6522902397" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" title="TAKE"/>
                                 <connections>
                                     <action selector="takeHit:" destination="v6p-TI-wcG" eventType="touchUpInside" id="pzp-dE-Zb4"/>
                                 </connections>
                             </button>
                             <imageView alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8AG-fN-5qC">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.6522902397" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.84655928935753433" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="cPz-pB-bLX" appends="YES" id="p52-98-D6d"/>
                                 </connections>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="85 mg/dL" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xkX-jd-b1u">
+                                <rect key="frame" x="20" y="50" width="91.5" height="72"/>
+                                <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" red="0.19470283390000001" green="0.4061079621" blue="0.59612053629999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jYO-O0-5Zo">
+                                <rect key="frame" x="0.0" y="438" width="375" height="180"/>
+                                <subviews>
+                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YyK-1H-sl1">
+                                        <rect key="frame" x="20" y="10" width="335" height="24"/>
+                                        <gestureRecognizers/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="fI3-Ow-OnE" appends="YES" id="MTC-b2-RIg"/>
+                                        </connections>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.6522902397" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="YyK-1H-sl1" firstAttribute="top" secondItem="jYO-O0-5Zo" secondAttribute="top" constant="10" id="Q1Z-xt-0sn"/>
+                                    <constraint firstAttribute="height" constant="180" id="UV8-mC-LCE"/>
+                                    <constraint firstItem="YyK-1H-sl1" firstAttribute="leading" secondItem="jYO-O0-5Zo" secondAttribute="leading" constant="20" id="YDh-JV-CrW"/>
+                                    <constraint firstAttribute="trailing" secondItem="YyK-1H-sl1" secondAttribute="trailing" constant="20" id="dGv-lJ-lBg"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="jYO-O0-5Zo" firstAttribute="leading" secondItem="xcI-ir-arV" secondAttribute="leading" id="2gb-xX-ktl"/>
+                            <constraint firstItem="xkX-jd-b1u" firstAttribute="leading" secondItem="xcI-ir-arV" secondAttribute="leading" constant="20" id="5Q2-DQ-Aw1"/>
                             <constraint firstItem="pf7-Ue-nfK" firstAttribute="leading" secondItem="xcI-ir-arV" secondAttribute="leading" id="6ue-Lx-Klk"/>
+                            <constraint firstItem="xkX-jd-b1u" firstAttribute="top" secondItem="xcI-ir-arV" secondAttribute="top" constant="30" id="AuR-I8-DxC"/>
                             <constraint firstItem="bBf-h0-te2" firstAttribute="centerX" secondItem="tiP-rg-iA9" secondAttribute="centerX" id="DXZ-gb-KhW"/>
                             <constraint firstItem="8AG-fN-5qC" firstAttribute="trailing" secondItem="xcI-ir-arV" secondAttribute="trailing" id="LT3-TG-VeF"/>
                             <constraint firstItem="pf7-Ue-nfK" firstAttribute="top" secondItem="tiP-rg-iA9" secondAttribute="top" id="OeF-SR-yEm"/>
                             <constraint firstItem="8AG-fN-5qC" firstAttribute="top" secondItem="tiP-rg-iA9" secondAttribute="top" id="TUy-Cz-75r"/>
                             <constraint firstItem="xcI-ir-arV" firstAttribute="bottom" secondItem="bBf-h0-te2" secondAttribute="bottom" constant="10" id="Xkq-M9-cxm"/>
+                            <constraint firstItem="jYO-O0-5Zo" firstAttribute="bottom" secondItem="xcI-ir-arV" secondAttribute="bottom" id="a0q-sh-Xub"/>
+                            <constraint firstItem="jYO-O0-5Zo" firstAttribute="trailing" secondItem="xcI-ir-arV" secondAttribute="trailing" id="aDk-tc-hb8"/>
                             <constraint firstItem="8AG-fN-5qC" firstAttribute="leading" secondItem="xcI-ir-arV" secondAttribute="leading" id="bM2-bd-i93"/>
                             <constraint firstItem="8AG-fN-5qC" firstAttribute="bottom" secondItem="xcI-ir-arV" secondAttribute="bottom" id="dRm-PN-pQk"/>
                             <constraint firstItem="pf7-Ue-nfK" firstAttribute="trailing" secondItem="xcI-ir-arV" secondAttribute="trailing" id="hbz-Qk-Jrj"/>
@@ -70,11 +107,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xcI-ir-arV"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="Fnd-a7-JJC"/>
+                    <tabBarItem key="tabBarItem" title="Camera" id="Fnd-a7-JJC"/>
                     <connections>
                         <outlet property="camButton" destination="bBf-h0-te2" id="SaU-7j-95o"/>
                         <outlet property="cameraView" destination="pf7-Ue-nfK" id="SiM-f0-ycj"/>
+                        <outlet property="dataLabel" destination="xkX-jd-b1u" id="mOE-YN-pga"/>
                         <outlet property="imageView" destination="8AG-fN-5qC" id="fMf-TZ-fum"/>
+                        <outlet property="infoHeightConstraint" destination="UV8-mC-LCE" id="9ub-7L-XVK"/>
+                        <outlet property="infoLabel" destination="YyK-1H-sl1" id="jwB-Hg-Vk8"/>
+                        <outlet property="infoView" destination="jYO-O0-5Zo" id="anZ-qq-aff"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dnN-MV-GvY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -83,8 +124,13 @@
                         <action selector="imageTapped:" destination="v6p-TI-wcG" id="uoq-48-NMj"/>
                     </connections>
                 </tapGestureRecognizer>
+                <tapGestureRecognizer id="fI3-Ow-OnE">
+                    <connections>
+                        <action selector="infoTapped:" destination="v6p-TI-wcG" id="daP-vY-rAo"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="53.600000000000001" y="27.436281859070466"/>
+            <point key="canvasLocation" x="53.600000000000001" y="14.842578710644679"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ZIk-Dt-uxz">
@@ -109,6 +155,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.1647058824" green="0.17254901959999999" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="v6p-TI-wcG" kind="relationship" relationship="viewControllers" id="X7r-FK-R0n"/>

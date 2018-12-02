@@ -13,6 +13,16 @@ import CameraManager
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var infoView: UIView!
+    @IBOutlet weak var infoHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var infoLabel: UILabel!
+    
+    @IBOutlet weak var dataLabel: UILabel! {
+        didSet {
+            dataLabel.layer.cornerRadius = 8
+            dataLabel.layer.masksToBounds = true
+        }
+    }
     @IBOutlet weak var cameraView: UIView!
     @IBOutlet weak var imageView: UIImageView!
     let cameraManager = CameraManager()
@@ -32,7 +42,12 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var camButton: UIButton!
+    @IBOutlet weak var camButton: UIButton! {
+        didSet {
+            camButton.layer.cornerRadius = 10
+            camButton.layer.masksToBounds = true
+        }
+    }
     @IBAction func takeHit(_ sender: UIButton) {
         cameraManager.capturePictureWithCompletion({ (image, error) -> Void in
             guard let image = image else { return }
@@ -43,6 +58,33 @@ class ViewController: UIViewController {
             }
         })
     }
+    
+    let infoData = [
+        "LOADED FRIES\nCalories: 1100\nCarbs: 95g\nSugars: 6g",
+        "SPINACH FLORENTINE FLATBREAD\nCalories: 550\nCarbs: 51g\nSugars: 4g",
+        "BBQ CHICKEN FLATBREAD\nCalories: 650\nCarbs: 66g\nSugars: 18g",
+        "CRISPY BRUSSELS SPROUTS\nCalories: 670\nCarbs: 38g\nSugars: 8g",
+        "GIANT ONION RINGS\nCalories: 690\nCarbs: 155g\nSugars: 33g"
+    ]
+    
+    let infoColors = [ 2, 0, 1, 0, 1 ]
+    
+    func showInfo(index:Int) {
+        infoLabel.text = infoData[index]
+        infoHeightConstraint.constant = 180
+        UIView.animate(withDuration: 0.4) {
+            self.view.layoutIfNeeded()
+        }
+        
+    }
+    
+    func hideInfo() {
+        infoLabel.text = ""
+        infoHeightConstraint.constant = 0
+        UIView.animate(withDuration: 0.4) {
+            self.view.layoutIfNeeded()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,6 +93,10 @@ class ViewController: UIViewController {
         cameraManager.cameraDevice = .back
         cameraManager.writeFilesToPhoneLibrary = false
         cameraManager.shouldRespondToOrientationChanges = true
+        cameraManager.animateShutter = true
+        
+        infoHeightConstraint.constant = 0
+        view.layoutIfNeeded()
 
     }
     
@@ -116,7 +162,7 @@ class ViewController: UIViewController {
             // layer.borderColor = UIColor.green.cgColor
             
             do {
-                var transform = CGAffineTransform.identity
+                var transform = CGAffineTransform.identity // .rotated(by: .pi/2)
                 transform = transform.scaledBy(x: image.size.width, y: -image.size.height)
                 transform = transform.translatedBy(x: 0, y: -1)
                 let rect = result.boundingBox.applying(transform)
@@ -198,12 +244,40 @@ class ViewController: UIViewController {
             UIColor.orange.withAlphaComponent(0.2).cgColor
         ]
         for (i,ms) in menuSets.enumerated() {
+            let f = ms.first
+            var x : CGFloat = f?.1.frame.origin.x ?? 0
+            var y : CGFloat = f?.1.frame.origin.y ?? 0
+            var r : CGFloat = f?.1.frame.maxX ?? 0
+            var b : CGFloat = f?.1.frame.maxY ?? 0
             for vl in ms {
-                vl.1.backgroundColor = bg[i % bg.count]
+                let idx = infoColors[i % infoColors.count]
+                vl.1.backgroundColor = bg[idx] // bg[i % bg.count]
+                x = min(x,vl.1.frame.origin.x)
+                y = min(y,vl.1.frame.origin.y)
+                r = max(r,vl.1.frame.maxX)
+                b = max(b,vl.1.frame.maxY)
             }
+            let rect = CGRect(x: x, y: y, width: r-x, height: b-y)
+            let v = UIView(frame: rect)
+            v.tag = i
+            let t = UITapGestureRecognizer(target: self, action: #selector(menuTapped(_:)))
+            v.addGestureRecognizer(t)
+            v.backgroundColor = UIColor.clear
+            imageView.addSubview(v)
         }
         
         // delegate?.boxService(self, didDetect: images)
+    }
+    
+    @objc func menuTapped(_ sender:UITapGestureRecognizer) {
+        guard let v = sender.view else { return }
+        print(v.tag)
+        if v.tag < infoData.count {
+            showInfo(index: v.tag)
+        }
+    }
+    @IBAction func infoTapped(_ sender: UITapGestureRecognizer) {
+        hideInfo()
     }
     
     private func reset() {
@@ -212,6 +286,9 @@ class ViewController: UIViewController {
         }
         layers.removeAll()
         menuSets.removeAll()
+        imageView.subviews.forEach {
+            $0.removeFromSuperview()
+        }
     }
     
     private func crop(image: UIImage, rect: CGRect) -> UIImage? {

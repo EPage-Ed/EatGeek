@@ -5,7 +5,123 @@
 	<key>logFormatVersion</key>
 	<integer>9</integer>
 	<key>logs</key>
-	<dict/>
+	<dict>
+		<key>21D3F44A-06B8-4011-8666-5A6DF60CC228</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.framework</string>
+			<key>fileName</key>
+			<string>21D3F44A-06B8-4011-8666-5A6DF60CC228.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>signature</key>
+			<string>GPUImage-euikvgpkfbkrebbnydujbqvzsaif</string>
+			<key>timeStartedRecording</key>
+			<real>565426749.71178997</real>
+			<key>timeStoppedRecording</key>
+			<real>565426749.81435394</real>
+			<key>title</key>
+			<string>Build target GPUImage</string>
+			<key>uniqueIdentifier</key>
+			<string>21D3F44A-06B8-4011-8666-5A6DF60CC228</string>
+		</dict>
+		<key>23EBE3A8-1821-482C-9CBF-038774966DE4</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.framework</string>
+			<key>fileName</key>
+			<string>23EBE3A8-1821-482C-9CBF-038774966DE4.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>signature</key>
+			<string>TesseractOCRSDKiOS-euikvgpkfbkrebbnydujbqvzsaif</string>
+			<key>timeStartedRecording</key>
+			<real>565426749.78995895</real>
+			<key>timeStoppedRecording</key>
+			<real>565426749.81510603</real>
+			<key>title</key>
+			<string>Build target TesseractOCRSDKiOS</string>
+			<key>uniqueIdentifier</key>
+			<string>23EBE3A8-1821-482C-9CBF-038774966DE4</string>
+		</dict>
+		<key>79B256E0-FB11-4E36-855B-8FED6233F83E</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.framework</string>
+			<key>fileName</key>
+			<string>79B256E0-FB11-4E36-855B-8FED6233F83E.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>signature</key>
+			<string>Pods-EatSafe-euikvgpkfbkrebbnydujbqvzsaif</string>
+			<key>timeStartedRecording</key>
+			<real>565426749.811059</real>
+			<key>timeStoppedRecording</key>
+			<real>565426749.81647205</real>
+			<key>title</key>
+			<string>Build target Pods-EatSafe</string>
+			<key>uniqueIdentifier</key>
+			<string>79B256E0-FB11-4E36-855B-8FED6233F83E</string>
+		</dict>
+		<key>9DA70383-CB07-4F10-B544-994C5F9776FD</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
+			<key>fileName</key>
+			<string>9DA70383-CB07-4F10-B544-994C5F9776FD.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>signature</key>
+			<string>EatSafe-fxxtmehpnsqltaarwybnglkkppvb</string>
+			<key>timeStartedRecording</key>
+			<real>565429235.30365503</real>
+			<key>timeStoppedRecording</key>
+			<real>565429241.37385798</real>
+			<key>title</key>
+			<string>Build target EatSafe</string>
+			<key>uniqueIdentifier</key>
+			<string>9DA70383-CB07-4F10-B544-994C5F9776FD</string>
+		</dict>
+		<key>E82BAD2C-9286-4FB5-8312-83C124C5DCDD</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.framework</string>
+			<key>fileName</key>
+			<string>E82BAD2C-9286-4FB5-8312-83C124C5DCDD.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>signature</key>
+			<string>CameraManager-euikvgpkfbkrebbnydujbqvzsaif</string>
+			<key>timeStartedRecording</key>
+			<real>565426749.705585</real>
+			<key>timeStoppedRecording</key>
+			<real>565426749.81553102</real>
+			<key>title</key>
+			<string>Build target CameraManager</string>
+			<key>uniqueIdentifier</key>
+			<string>E82BAD2C-9286-4FB5-8312-83C124C5DCDD</string>
+		</dict>
+	</dict>
 	<key>preserveOldLogs</key>
 	<true/>
 </dict>
