@@ -8,6 +8,13 @@
 
 import UIKit
 
+extension AppDelegate: OCRDelegate {
+    func result(text: String) {
+        print("and the text is: ")
+        print(text)
+    }
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -16,6 +23,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let oc = OCR()
+        guard let img = UIImage(named:"text.jpg") else { return true }
+        oc.delegate = self
+        oc.processImage(image: img)
+        
         return true
     }
 

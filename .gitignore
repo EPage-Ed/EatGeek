@@ -2,6 +2,12 @@
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
+<<<<<<< HEAD
+=======
+# Language files
+tessdata/
+
+>>>>>>> 54a28f26b1e573487937325bb4718baeee4a2444
 ## Build generated
 build/
 DerivedData/
@@ -46,7 +52,14 @@ playground.xcworkspace
 # you should judge for yourself, the pros and cons are mentioned at:
 # https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
 #
+<<<<<<< HEAD
 # Pods/
+=======
+Pods/
+#
+# Add this line if you want to avoid checking in source code from the Xcode workspace
+# *.xcworkspace
+>>>>>>> 54a28f26b1e573487937325bb4718baeee4a2444
 
 # Carthage
 #
@@ -64,5 +77,17 @@ Carthage/Build
 
 fastlane/report.xml
 fastlane/Preview.html
+<<<<<<< HEAD
 fastlane/screenshots
 fastlane/test_output
+=======
+fastlane/screenshots/**/*.png
+fastlane/test_output
+
+# Code Injection
+#
+# After new code Injection tools there's a generated folder /iOSInjectionProject
+# https://github.com/johnno1962/injectionforxcode
+
+iOSInjectionProject/
+>>>>>>> 54a28f26b1e573487937325bb4718baeee4a2444
