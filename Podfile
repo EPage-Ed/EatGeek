@@ -8,7 +8,8 @@ target 'EatSafe' do
   # Pods for EatSafe
   pod 'OpenCV'
   pod 'CameraManager', '~> 4.0'
-  pod 'TesseractOCRiOS'
+  # pod 'TesseractOCRiOS'
+  pod 'TesseractOCRSDKiOS'
 
 end
 
