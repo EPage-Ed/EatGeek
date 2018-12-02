@@ -64,6 +64,35 @@
 			<key>uniqueIdentifier</key>
 			<string>02C9A70A-EDCD-4AD4-9939-42328024E3CF</string>
 		</dict>
+		<key>04838C11-A7EE-45B9-AE09-91D56F45F1A9</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>04838C11-A7EE-45B9-AE09-91D56F45F1A9.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>EatSafe project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>EatSafe</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug EatSafe</string>
+			<key>timeStartedRecording</key>
+			<real>565416915.43296599</real>
+			<key>timeStoppedRecording</key>
+			<real>565417006.37679505</real>
+			<key>title</key>
+			<string>Debug EatSafe</string>
+			<key>uniqueIdentifier</key>
+			<string>04838C11-A7EE-45B9-AE09-91D56F45F1A9</string>
+		</dict>
 		<key>049B8D64-B6E6-442A-AC39-76B38F3CC1FA</key>
 		<dict>
 			<key>className</key>
@@ -179,6 +208,35 @@
 			<string>Debug EatSafe</string>
 			<key>uniqueIdentifier</key>
 			<string>3E7773DD-7736-44FF-8D5E-385B4A642F0C</string>
+		</dict>
+		<key>4110C7A0-5980-47BF-86BA-38F55430D9D2</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>4110C7A0-5980-47BF-86BA-38F55430D9D2.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>EatSafe project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>EatSafe</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug EatSafe</string>
+			<key>timeStartedRecording</key>
+			<real>565416249.79795098</real>
+			<key>timeStoppedRecording</key>
+			<real>565416909.08748698</real>
+			<key>title</key>
+			<string>Debug EatSafe</string>
+			<key>uniqueIdentifier</key>
+			<string>4110C7A0-5980-47BF-86BA-38F55430D9D2</string>
 		</dict>
 		<key>44596BD1-7767-48E5-AD64-56B4234171FF</key>
 		<dict>

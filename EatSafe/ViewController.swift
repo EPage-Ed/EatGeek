@@ -134,6 +134,7 @@ class ViewController: UIViewController {
                     print("Skip: \(result.boundingBox)")
                     return nil
                 }
+
             }
             
             do {

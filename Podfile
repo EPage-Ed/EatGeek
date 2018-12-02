@@ -10,6 +10,7 @@ target 'EatSafe' do
   pod 'CameraManager', '~> 4.0'
   # pod 'TesseractOCRiOS'
   pod 'TesseractOCRSDKiOS'
+  pod 'GPUImage'
 
 end
 
