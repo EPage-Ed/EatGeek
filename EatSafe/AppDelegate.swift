@@ -23,12 +23,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
         let oc = OCR()
-        guard let img = UIImage(named:"text.jpg") else { return true }
         oc.delegate = self
-        oc.processImage(image: img)
-        
+
+        for i in 0..<3 {
+
+            if let filepath = Bundle.main.path(forResource: "OCR_data/sample\(i)", ofType: "txt") {
+                do {
+                    let expected = try String(contentsOfFile: filepath)
+                    guard let img = UIImage(named:"OCR_data/sample\(i).jpg") else { return true }
+                    print("expecting: \(expected)")
+                    oc.processImage(image: img)
+                } catch {
+                    // contents could not be loaded
+                }
+            } else {
+                // example.txt not found!
+            }
+        }
         return true
     }
 
